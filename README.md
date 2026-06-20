@@ -55,7 +55,6 @@ Dari analisis dan pemodelan yang dilakukan, dapat disimpulkan bahwa:
 4. **Performa Model**: Model Machine Learning berbasis *Random Forest* yang dilatih mampu membedakan antara mahasiswa yang akan *dropout* dan yang akan bertahan dengan akurasi yang baik, sehingga sistem ini sangat siap diimplementasikan untuk deteksi dini.
 
 ### Rekomendasi Action Items
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka:
 - **Program Bimbingan Finansial & Beasiswa Bertarget:** Memprioritaskan alokasi beasiswa atau keringanan biaya cicilan (bantuan finansial) kepada mahasiswa rentan, terutama yang terdeteksi sebagai *debtor* dan berisiko *dropout*.
 - **Intervensi Akademik Sedini Mungkin:** Institut harus mengimplementasikan model *Machine Learning* ini pada akhir semester pertama. Jika mahasiswa diprediksi memiliki probabilitas *dropout* tinggi akibat nilai yang rendah, konselor akademik harus langsung menjadwalkan sesi bimbingan khusus.
 - **Dukungan Khusus Mahasiswa Dewasa (Non-traditional Students):** Menyediakan fleksibilitas waktu (kelas malam/sore atau *online*) bagi mahasiswa yang mendaftar di usia matang untuk menyeimbangkan beban studi dan tanggung jawab pribadi.
