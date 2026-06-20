@@ -39,7 +39,8 @@ Anda dapat mengakses *dashboard* secara langsung melalui tautan berikut:
 ## Menjalankan Sistem Machine Learning
 Prototipe *Machine Learning* untuk memprediksi probabilitas *dropout* mahasiswa telah dibangun menggunakan antarmuka **Streamlit**.
 
-- **Tautan Streamlit Community Cloud:** `[MASUKKAN LINK DEPLOYMENT STREAMLIT ANDA DI SINI]`
+Aplikasi ini telah di-*deploy* ke Streamlit Community Cloud. Anda dapat mencobanya secara langsung melalui tautan berikut:
+**[Akses Sistem Prediksi Dropout Jaya Jaya Institut di Sini](https://penerapan-datascience.streamlit.app)**
 
 Untuk menjalankan aplikasi Streamlit ini secara lokal, jalankan perintah berikut pada terminal:
 ```bash
