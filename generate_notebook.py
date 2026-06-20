@@ -91,7 +91,10 @@ nb.cells.append(nbf.v4.new_markdown_cell("""## 4. Data Preparation / Preprocessi
 
 Karena tujuan institusi adalah mendeteksi "Dropout" sedini mungkin, kita akan mengubah klasifikasi ini menjadi *binary classification* (0 = Non-Dropout, 1 = Dropout).
 Selain itu, kita memisahkan data latih dan data uji, serta melakukan *scaling* agar model tidak bias terhadap variabel dengan rentang nilai yang besar."""))
-code_prep = """# Mengubah target variabel menjadi biner (1: Dropout, 0: Lainnya)
+code_prep = """# Menyaring data: Hanya gunakan data dengan status Dropout dan Graduate (Hapus Enrolled)
+df = df[df['Status'] != 'Enrolled']
+
+# Mengubah target variabel menjadi biner (1: Dropout, 0: Graduate)
 df['Target'] = df['Status'].apply(lambda x: 1 if x == 'Dropout' else 0)
 
 # Memisahkan Fitur (X) dan Target (y)

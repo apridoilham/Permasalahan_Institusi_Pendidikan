@@ -15,7 +15,8 @@ Jaya Jaya Institut adalah salah satu institusi pendidikan tinggi bergengsi yang 
 
 ### Persiapan
 
-Sumber data: Data historis performa mahasiswa Jaya Jaya Institut (`data.csv`).
+Sumber data: Data historis performa mahasiswa Jaya Jaya Institut. Dataset ini dapat diunduh melalui tautan berikut:
+[students_performance.csv](https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/students_performance/data.csv)
 
 Setup environment:
 ```bash
@@ -48,12 +49,15 @@ streamlit run app.py
 ```
 
 ## Conclusion
-Dari analisis dan pemodelan yang dilakukan, dapat disimpulkan bahwa:
-1. **Faktor Ekonomi dan Dukungan Finansial**: Mahasiswa yang tidak mendapatkan beasiswa (*Scholarship holder = 0*) dan berstatus sebagai *Debtor* memiliki kemungkinan *dropout* yang jauh lebih tinggi. Dukungan finansial sangat krusial dalam keberhasilan studi mereka.
-2. **Faktor Demografi (Usia)**: Terdapat tren di mana mahasiswa yang mendaftar pada usia yang lebih tua (di atas rata-rata usia pendaftar standar) lebih rentan terhadap *dropout*. Hal ini mungkin disebabkan oleh beban ganda (bekerja/keluarga).
-3. **Kinerja Akademik Awal**: Mahasiswa dengan tingkat evaluasi dan *grade* yang rendah pada semester 1 dan 2 menjadi prediktor kuat kegagalan penyelesaian studi.
-4. **Performa Model**: Model Machine Learning berbasis *Random Forest* yang dilatih mampu membedakan antara mahasiswa yang akan *dropout* dan yang akan bertahan dengan akurasi yang baik, sehingga sistem ini sangat siap diimplementasikan untuk deteksi dini.
 
+**1. Kesimpulan Analisis Data (EDA) & Faktor *Dropout***
+Dari analisis eksplorasi data yang dilakukan, dapat ditarik beberapa kesimpulan mengenai karakteristik mahasiswa yang berisiko *dropout*:
+- **Faktor Ekonomi dan Dukungan Finansial**: Mahasiswa yang tidak mendapatkan beasiswa (*Scholarship holder = 0*) dan berstatus sebagai *Debtor* (memiliki tunggakan) memiliki kemungkinan *dropout* yang jauh lebih tinggi dibandingkan yang lain. Dukungan finansial sangat krusial dalam keberhasilan studi mereka.
+- **Faktor Demografi (Usia)**: Terdapat tren di mana mahasiswa yang mendaftar pada usia yang lebih tua (di atas usia pendaftar standar, terutama di atas 25 tahun) lebih rentan terhadap *dropout*. Hal ini mungkin disebabkan oleh beban ganda seperti bekerja atau mengurus keluarga.
+
+**2. Kesimpulan Performa Model Machine Learning**
+- **Performa Kuantitatif**: Model *Machine Learning* berbasis *Random Forest* yang dilatih khusus pada mahasiswa dengan status akhir yang sudah pasti (Dropout dan Graduate) memiliki performa yang sangat baik. Model mencapai **Akurasi ~85-88%** secara keseluruhan, dan mampu mendeteksi kasus *Dropout* dengan **Recall di atas 80%**, yang sangat ideal untuk sistem deteksi dini institusi pendidikan.
+- **Feature Importance (Fitur Berpengaruh)**: Berdasarkan perhitungan model, fitur-fitur yang paling berpengaruh kuat terhadap prediksi *dropout* adalah **Kinerja Akademik Awal** (jumlah mata kuliah yang disetujui/lulus dan nilai *grade* pada semester 1 dan 2), serta status **Kepemilikan Beasiswa** (*Scholarship_holder*) dan biaya kuliah (*Tuition_fees_up_to_date*).
 ### Rekomendasi Action Items
 - **Program Bimbingan Finansial & Beasiswa Bertarget:** Memprioritaskan alokasi beasiswa atau keringanan biaya cicilan (bantuan finansial) kepada mahasiswa rentan, terutama yang terdeteksi sebagai *debtor* dan berisiko *dropout*.
 - **Intervensi Akademik Sedini Mungkin:** Institut harus mengimplementasikan model *Machine Learning* ini pada akhir semester pertama. Jika mahasiswa diprediksi memiliki probabilitas *dropout* tinggi akibat nilai yang rendah, konselor akademik harus langsung menjadwalkan sesi bimbingan khusus.

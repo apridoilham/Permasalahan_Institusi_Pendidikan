@@ -103,9 +103,9 @@ elif page == "🔮 Dropout Predictor":
                     st.progress(float(probability[1]))
                     st.markdown(f"**Probabilitas Dropout:** {probability[1]*100:.1f}%")
                 else:
-                    st.success(f"✅ **AMAN.** Siswa ini diprediksi **TIDAK DROPOUT** (Akan Lulus/Bertahan).")
+                    st.success(f"✅ **AMAN.** Siswa ini diprediksi **LULUS** (Graduate).")
                     st.progress(float(probability[0]))
-                    st.markdown(f"**Probabilitas Bertahan:** {probability[0]*100:.1f}%")
+                    st.markdown(f"**Probabilitas Lulus:** {probability[0]*100:.1f}%")
                     
                 st.info(f"Sebagai referensi, status aktual siswa ini pada database adalah: **{actual_status}**")
                 
